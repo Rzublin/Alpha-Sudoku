@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+   main {
+    flex: 1 0 auto;	
+  }
+  
+  .main-sudoku {
+	  text-align: center;
+  }
+  
+  .regeln {
+	 margin-top: 10%;
+	 font-size: 25px;
+  }
+  
+  #regeln {
+	  margin-top: 1px;
+  }
+  
+ table {
+    border-collapse: collapse;
+	font-size: 22px;
+}
+
+table, td {
+    border: 1px solid black;
+}
+
+td {
+	padding: 0;
+	width: 40px !important;
+	height: 40px !important;
+	text-align: center !important;
+}
+
+
+table{
+	width: inherit;
+	border: 2px solid black;
+	margin: auto;					 
+}
+
+.card-panel{
+	display: none;
+}
+
+#rangliste {
+	display: none;
+}
+
+#app{
+	display: none;
+}
+
+#modalZahlen { 
+	width: 150px !important ; 
+	margin-left: 40%;
+	margin-top: 2%;
+}
+
+.modalZahlenContent{
+	padding: 0px !important;
+	margin-top: 10px;
+}
+
+.zahl {
+	margin-left: 10px !important;
+}
+
+button {
+	margin-top: 15px;
+	margin-right: 5px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.brand-logo {
+		font-size: 20px !important;
+		font-weight: bold !important;
+	}
+	.collection-item {
+		font-size: 18px !important;
+	}
+} 
+
+#timer {
+	
+	font-size: 20px !important;		
+}
+
+.timer-wrapper {
+	margin-top: 5%;
+}
+
+i.right {
+	margin: 0px !important;
+	margin-right: -15px !important;
+}
+
+/* Materialize Input */
+.input-field label {
+ color: #fff;
+}
+
+.input-field input {
+   color: #fff;
+}
+
+.input-field input[type=text] {
+ border-bottom: 1px solid #009688;
+ box-shadow: 0 1px 0 0 #009688;
+}
+
+#neustarten{
+	display: none;
+}
+

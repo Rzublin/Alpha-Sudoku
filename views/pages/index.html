@@ -1,0 +1,133 @@
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- Compiled and minified CSS -->
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+	  <!-- CSS -->
+	  <link rel="stylesheet" href="css/style.css">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	  <meta charset="UTF-8"/>
+	  <title>Alpha Sudoku</title>
+    </head>
+
+    <body>
+	  <!-- NAVBAR	 -->
+	  <nav>
+		<div class="nav-wrapper ">
+			<div class="container">
+			  <a href="/" class="brand-logo">Alpha Sudoku</a>
+			  <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+			  <ul class="right hide-on-med-and-down">
+				  <li><a href="/">Home</a></li>
+				  <li><a href="/rangliste" class="menuTab">Rangliste</a></li>
+				  <li><a href="/regeln" class="menuTab">Regeln</a></li>
+				  <li><a href="/ueberuns" class="menuTab">Über Uns</a></li>
+			  </ul>
+			</div>
+		</div>
+	  </nav>
+	  <!-- NAVBAR MOBILE -->
+	  <ul id="nav-mobile" class="sidenav">
+		  <li><a href="/">Home</a></li>
+		  <li><a href="/rangliste" class="menuTab">Rangliste</a></li>
+		  <li><a href="/regeln" class="menuTab">Regeln</a></li>
+		  <li><a href="/ueberuns" class="menuTab">Über Uns</a></li>
+	  </ul>
+	  
+	  <!-- MAIN -->
+	  <main class="main-sudoku">		
+			<!-- Das Sudokubrett -->
+			<div class="row timer-wrapper" >
+				<div class="col s12 "> 
+					<span id="timer">Laufzeit: 00:00:00</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12">
+					<div id="app">
+						<table id="sudokuBrett" class="centered pointer">
+						</table>
+						<button id="schwirigkeit" class="waves-effect waves-green teal white-text btn-flat dropdown-trigger" data-target="schwierigkeitdropdown">
+							<i class="material-icons right">arrow_drop_down</i>Schwierigkeit</button>	
+			   			<!-- <button id="loesung" class="waves-effect waves-green teal white-text btn-flat">Lösung</button> -->
+						<button id="starten" class="waves-effect waves-green teal white-text btn-flat">Starten</button>
+						<button id="neustarten" class="waves-effect waves-green teal white-text btn-flat">Neues Spiel</button>																					
+					</div>	
+				</div>
+			</div>												   		
+			
+			<!-- Schwirigkeit Dropdown -->
+			<ul id='schwierigkeitdropdown' class='dropdown-content'>
+				<li><a href="#!">Einfach</a></li>
+				<li><a href="#!">Normal</a></li>
+				<li><a href="#!">Schwer</a></li>
+			</ul>
+			
+			
+		  <!-- Modal für die Eingabe Zahlen -->
+		  <div id="modalZahlen" class="modal">
+			<div class="modal-content modalZahlenContent">
+			  <div class="row">
+				<a class="col s3  btn zahl" >1</a>
+				<a class="col s3  btn zahl" href="#!">2</a>
+				<a class="col s3  btn zahl" href="#!">3</a>
+			  </div>
+			  <div class="row">
+				<a class="col s3  btn zahl" href="#!">4</a>
+				<a class="col s3  btn zahl" href="#!">5</a>
+				<a class="col s3  btn zahl" href="#!">6</a>
+			  </div>
+			  <div class="row">
+				<a class="col s3  btn zahl" href="#!">7</a>
+				<a class="col s3  btn zahl" href="#!">8</a>
+				<a class="col s3  btn zahl" >9</a>
+			  </div>
+			  <div class="row">
+				<a href="#!" id="loeschen" class="modal-action modal-close waves-effect waves-green btn-flat">Löschen</a>
+			  </div>
+			</div>
+		  </div>
+		  
+		  <!-- Modal füu das Spiel Ergebnis -->
+		  <div id="modalSpielEreignis" class="modal teal lighten-2 white-text">
+			<div class="modal-content">			
+				<h4 id="modalSpielEreignisH4"></h4>
+				<p id="modalSpielEreignisP"></p>
+				<div id="inputfieldEreignis" class="input-field col s12">
+				</div>	
+			</div>	  
+		  </div> 
+		  
+        </main>  
+	  
+	  
+	  <!-- FOOTER -->
+	  <footer class="page-footer">
+		<div class="footer-copyright center">
+            <div class="container">
+				&copy; 2018 Raphael Züblin	
+            </div>
+        </div>	  
+	  </footer>
+        
+	
+	  <!-- JQuery -->
+	  <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous">
+	  </script>
+      <!-- Materialize JavaScript -->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>	   
+	  <!-- Spiel Javascript -->
+	  <script src="js/main.js"></script>
+	  <!-- Animation Javascript -->
+	  <script src="js/anim.js"></script>
+	
+    </body>
+  </html>
+        
